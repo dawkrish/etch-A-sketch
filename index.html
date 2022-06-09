@@ -11,74 +11,34 @@
 <body>
 
     <div class="buttonClass">
-        <button id="button1">4</button>
-        <button id="button2">8</button>
-        <button id="button3">12</button>
-        <button class="clear">Clear</button>
+        <button  data-key="4">4x4</button>
+        <button  data-key="6">6x6</button>
+        <button  data-key="8">8x8</button>
+        <button  data-key="10">10x10</button>
+        <button  data-key="12">12x12</button>
+        <button  data-key="14">14x14</button>
+        <button  data-key="16">16x16</button>
+        <button  data-key="18">18x18</button>
+        <button  data-key="20">20x20</button>
+        <button  data-key="22">22x22</button>
+        <button  data-key="24">24x24</button>
+        <button  data-key="26">26x26</button>
+        <button  data-key="28">28x28</button>
+        <button  data-key="30">30x30</button>
+        <button  data-key="32">32x32</button>
+        <button  data-key="34">34x34</button>
+        <button  data-key="36">36x36</button>
+        
     </div>
+    <button class="clear">Clear</button>    
+    <button id="eraser">Eraser</button>
+    <button id="rainbow">Rainbow</button>
+
+    <div id="dimension"></div>
     <div class="grid"></div>
     
 
-    <script>   
-
-        const intakeButton = document.querySelectorAll(".buttonClass button");
-        const parentFlex = document.getElementsByClassName("grid")[0];
-        const clear = document.getElementsByClassName("clear")[0];
-
-
-        for(let i = 0; i < 3; i++){
-            
-            intakeButton[i].addEventListener("click",function(){
-                let gridSize = 0;
-                let size = intakeButton[i].innerHTML;
-                gridSize += Number(size);
-                console.log(gridSize);
-                parentFlex.innerHTML = "";
-                
-                for(let j = 0; j < gridSize*gridSize; j++){
-                
-                    let grid = document.createElement('div');
-                    grid.style.width = "36px";
-                    grid.style.height = "26px";
-                    grid.style.border = "2.2px solid black";
-                    grid.style.display = "flex";
-                    grid.style.justifyContent = "center";
-                    grid.style.alignItems = "center";
-                    grid.innerHTML = j + 1;
-
-                    parentFlex.style.display = "grid";
-                    if(gridSize == 4){
-                        parentFlex.style.gridTemplateColumns = "auto auto auto auto";
-                    }
-                    if(gridSize == 8){
-                        parentFlex.style.gridTemplateColumns = "auto auto auto auto auto auto auto auto";
-                    }
-                    if(gridSize == 12){
-                        parentFlex.style.gridTemplateColumns = "auto auto auto auto auto auto auto auto auto auto auto auto";
-                    }
-                    parentFlex.style.gridGap = "0px 0px";
-                    parentFlex.appendChild(grid);
-                    
-                }
-            })
-        
-        }
-
-        clear.addEventListener("click",function(){
-            parentFlex.innerHTML = "";
-        })
-
-
-        
-        
-
-
-    
-
-
-
-
-
+    <script src="script.js">   
 
         
     </script>

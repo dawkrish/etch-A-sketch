@@ -1,8 +1,37 @@
+body{
+    display: flex ;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .buttonClass{
+    
+    margin: 5px 10px 5px 10px;
     margin-bottom: 30px;
 }
 
 .clear{
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
+.grid{
+    border : 2.2px solid black;
+    width: 504px;
+    height: 504px;
+    
+}
+
+.gridProperties{
+    
+    
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    
+}
+
+#eraser,#rainbow{
+    margin: 15px;
+}
